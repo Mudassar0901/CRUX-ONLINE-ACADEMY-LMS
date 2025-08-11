@@ -1,0 +1,33 @@
+{
+  "name": "Crux LMS Dev",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "Prisma.prisma",
+        "GraphQL.vscode-graphql"
+      ]
+    }
+  },
+  "forwardPorts": [
+    4000,
+    5173
+  ],
+  "portsAttributes": {
+    "4000": {
+      "label": "Crux API",
+      "onAutoForward": "openBrowser"
+    },
+    "5173": {
+      "label": "Crux Dashboard",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postStartCommand": "bash .devcontainer/start.sh"
+}

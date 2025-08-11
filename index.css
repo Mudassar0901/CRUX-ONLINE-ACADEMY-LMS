@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --crux-dark:#0b1b3b;
+  --crux-yellow:#ffc107;
+  --crux-light:#34b6f7;
+}
